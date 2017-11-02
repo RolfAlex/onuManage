@@ -1,0 +1,45 @@
+����
+>>User name:diptan@utg
+>>User password:
+
+
+
+  Huawei Integrated Access Software (MA5608T).
+  Copyright(C) Huawei Technologies Co., Ltd. 2002-2013. All rights reserved.
+
+
+Rzhyshev_OLT>enable
+
+Rzhyshev_OLT#display ont autofind all
+   ----------------------------------------------------------------------------
+   Number              : 1
+   F/S/P               : 0/0/4
+   Ont SN              : 414C434CF29671DA
+   Password            : 0x44454641554C54000000(DEFAULT)
+   Loid                : 
+   Checkcode           : 
+   VendorID            : ALCL
+   Ont Version         : 3FE56573BAAA01��
+   Ont SoftwareVersion : 3FE56854AOTD27
+   Ont EquipmentID     : I-010G
+   Ont autofind time   : 2017-06-08 13:32:53+03:00
+   ----------------------------------------------------------------------------
+   Number              : 2
+   F/S/P               : 0/0/8
+   Ont SN              : 4857544372803E85
+   Password            : 0x00000000000000000000
+   Loid                : 
+   Checkcode           : 
+   VendorID            : HWTC
+   Ont Version         : A65.A
+   Ont SoftwareVersion : V3R017C00S100
+   Ont EquipmentID     : 310M
+---- More ( Press 'Q' to break ) ----[37D                                     [37D   Ont autofind time   : 2017-06-08 09:19:56+03:00
+   ----------------------------------------------------------------------------
+   The number of GPON autofind ONT is 2
+
+Rzhyshev_OLT# 
+
+Rzhyshev_OLT#@
+             ^
+  % Unknown command, the error locates at '^'

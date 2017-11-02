@@ -1,0 +1,8 @@
+Rjischev 10.0.240.7 diptan@utg master 21 20 2609 2802 
+Grebinki 10.0.167.7 diptan@utg master 500 101 2610 2609 
+Berezan 10.0.224.15 diptan@utg master 500 0 2687 0 
+Vasilcov 10.0.162.7 diptan@utg master 20 21 2640 2641 
+borova 10.0.166.7 diptan@utg master 0 20 0 2632 
+Vas_2 10.0.162.7 diptan@utg master 0 22 0 2642 
+Stavische_1 10.0.169.7 diptan@utg master 0 101 0 2635 
+Stavische_2 10.0.169.7 diptan@utg master 0 102 0 2636 
