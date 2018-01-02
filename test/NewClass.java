@@ -33,6 +33,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.xml.transform.Source;
 
 public class NewClass extends JFrame {
 
@@ -93,22 +94,48 @@ public class NewClass extends JFrame {
             s_out = s.getOutputStream();
             s_in = new PrintWriter(s_out, true);
             br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+            s_in.print(log + "\n"); //diptan@utg
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            s_in.print(pass + "\n");
+            s_in.flush();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            while (true) {
 
+                System.out.println("Enter text");
+                s_in.print(in.nextLine());
+                s_in.flush();
+
+                while (!command.equalsIgnoreCase("  % Unknown command, the error locates at '^'")) {
+                    try {
+                        command = br.readLine();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    System.out.println("LENGTH " + command.toCharArray().length);
+                    if (command.toCharArray().length > 0) {
+                        System.out.println(command);
+                        command = "";
+                    } else {
+                        break;
+//                        s_in.print("@\n");
+//                        s_in.print("\u0020");
+//                        s_in.flush();
+                    }
+
+                }
+
+            }
         } catch (Exception e) {
         }
-        s_in.print(log + "\n"); //diptan@utg
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        s_in.print(pass + "\n");
-        s_in.flush();
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        /*
         s_in.print("enable\n");
         s_in.flush();
         s_in.print("config\n");
@@ -125,30 +152,36 @@ public class NewClass extends JFrame {
         s_in.print("\u0020");
 
         s_in.print("\n");
-        s_in.print("2@\n");
+        s_in.print("\n");
         s_in.print("\n");
         s_in.flush();
         int i = 0;
-        while(true){
+        while (true) {
             System.out.println("halllll");
             s_in.print(in.nextLine());
             System.out.println("Halloooo");
             s_in.print("\u0020");
             s_in.print("\u0020");
-            s_in.print("2@\n");
+            s_in.print("\n");
             s_in.flush();
 
-        
-        while (!command.equalsIgnoreCase("  % Unknown command, the error locates at '^'")) {
-            try {
-                command = br.readLine();
-            } catch (IOException ex) {
-                Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+            while (true) {
+                // if(!command.equalsIgnoreCase("  % Unknown command, the error locates at '^'") ){
+                try {
+                    command = br.readLine();
+                } catch (IOException ex) {
+                    Logger.getLogger(Form.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                System.out.println(command);
+                command = "";
+                //}else{
+                //  break;
+                //}
+
             }
-            System.out.println(command);
-            command = "";
+
         }
-        }
+         */
 //            String[] tmp = command.split(" ");
 //            int tt = tmp.length;
 //            if (tt > 60) {
@@ -175,7 +208,6 @@ public class NewClass extends JFrame {
 //            x = replace;
 //        }
 //            System.out.println(x);
-
 //        String[] cou = x.split("\n");
 //        System.out.println(Arrays.toString(cou));
 //        Object[][] eeee = new Object[cou.length][9];
@@ -192,6 +224,5 @@ public class NewClass extends JFrame {
 //            }
 //            System.out.println();
 //        }
-
     }
 }
